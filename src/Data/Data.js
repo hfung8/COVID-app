@@ -8,15 +8,14 @@ const data = axios.get(`${url}/confirmed`);
         })
     }
 
-export default async function handlePlaces(){
+export const handlePlaces = async () => {
     const confirmed = fetchData();
     const data = await Promise.resolve(confirmed).then(function(result){
         const [value] = result;
         return value.data;
     })
-    const topTen = data.slice(0,10);
-    return topTen;
-    
+    const modified = data.slice(0,10);
+    return modified;
 }
 
 
