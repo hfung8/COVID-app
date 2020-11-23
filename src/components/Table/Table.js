@@ -1,18 +1,19 @@
 import React from "react";
 
-
 const Table = ( confirmedCountries )  => {
 
-    console.log(confirmedCountries);
-    const places = confirmedCountries.handlePlaces;
-    console.log(places);
-    const p = places.map((country, index) => (<li key={index}>{country}</li>))
-    console.log(p);
+    console.log(confirmedCountries.places);
+    var places;
+    if (confirmedCountries.places !== null){
+        places = JSON.parse(confirmedCountries.places);
+        return places.map((country, index) => <li key={index}>{country.countryRegion}</li>); 
+    }
+    
 return (
     <div>
         <h1>
            <ul>
-               HELLO
+               {places}
            </ul>
         </h1>
     </div>

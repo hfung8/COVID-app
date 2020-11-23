@@ -10,8 +10,10 @@ class App extends Component{
 
     async componentDidMount(){
     const places = await handlePlaces();
-    this.setState({places: places});
-    console.log(this.state);
+    console.log(places);
+    const p = JSON.stringify(places);
+    console.log(p);
+    this.setState({places: p});
     }
 
     render(){
@@ -22,7 +24,7 @@ class App extends Component{
 
                 <h1>App</h1>
                 <Flag />
-                <Table countries = {this.state.places}/> 
+                <Table places = {this.state.places}/> 
 
             </div>
         )
