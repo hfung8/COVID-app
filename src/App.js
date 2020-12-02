@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table, Flag } from './components';
+import { Tables, Flag } from './components';
 import { handlePlaces } from "./Data/Data";
 
 class App extends Component{
@@ -24,7 +24,7 @@ class App extends Component{
 
                 <h1>App</h1>
                 <Flag />
-                <Table places = {this.state.places}/> 
+                <Tables places = {this.state.places}/> 
 
             </div>
         )

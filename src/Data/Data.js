@@ -18,4 +18,3 @@ export const handlePlaces = async () => {
     return modified;
 }
 
-
