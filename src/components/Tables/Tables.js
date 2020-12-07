@@ -35,10 +35,7 @@ const Tables = ( confirmedCountries )  => {
             country.recovered = places[i].recovered;
             countries.push(country);
         }
-
         console.log(countries);
-
-        // return places.map((country, index) => <li key={index}>{country.countryRegion}</li>); 
     }
 
     console.log(row);
@@ -68,9 +65,6 @@ return (
             </TableRow>
           ))}
         </TableBody>
-          
-
-
             </Table>
         </TableContainer>
     </div>
